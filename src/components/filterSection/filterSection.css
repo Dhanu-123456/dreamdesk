@@ -1,0 +1,81 @@
+
+.profile-cont {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.profile-cont img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-cont h4 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.profile-cont p {
+  margin: 4px;
+  color: #666;
+  font-size: 15px;
+}
+
+.emp-cont,
+.sal-cont {
+  background: #ffffff;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.emp-cont h4,
+.sal-cont h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+}
+
+.emp-cont ul,
+.sal-cont ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.emp-cont li,
+.sal-cont li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom:8px;
+}
+
+.emp-cont input,
+.sal-cont input {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.emp-cont label,
+.sal-cont label {
+  color: #444;
+  cursor: pointer;
+  font-size: 15px;
+}
+hr {
+  margin: 8px 0;   
+  border: none;
+  border-top: 1px solid #ddd;
+}
+

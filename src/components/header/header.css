@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#eff2ff;
+  padding: 10px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+}
+
+.list-items ul {
+  display: flex;
+  list-style: none;
+  gap: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.list-items ul li {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.list-items ul li:hover {
+  color: #0073e6; /* subtle blue hover effect */
+  transform: translateY(-2px);
+}
+
+.user-profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}
