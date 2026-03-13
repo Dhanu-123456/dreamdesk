@@ -43,9 +43,9 @@ const salaryArr=[
 
 ]
 
-const FilterSection=(prop)=>{
+const FilterSection=(props)=>{
 
-    const[setMyValues,myValues] =prop;
+    const{setMyValues,myValues}=props;
 
     const[allValues, setValues]=useState({
 
@@ -115,7 +115,7 @@ const FilterSection=(prop)=>{
 
             if(e.target.checked){
 
-                setMyValues({...myValues,emptype:[allValues.emptype,e.target.value]});
+                setMyValues({...myValues,emptype:[...myValues.emptype,e.target.value]});
             }
             else{
                 setMyValues({...myValues,emptype:myValues.emptype.filter(each=>each!==e.target.value)});
