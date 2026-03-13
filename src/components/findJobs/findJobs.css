@@ -56,16 +56,17 @@
 }
 
 .input-box {
-  width:70%;
-  align-items: center;
-  padding: 20px;
-  margin: 0;
+  width:80%;
+  display: flex;
+  justify-content: center;
+  padding:10px;
+  margin:0;
   
 }
 
 .input-box input {
   width:100%;
-  padding:15px;
+  padding:25px;
   background: #ffffff;
   border: none;
   border-radius: 12px;

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './displayAllJobs.css'
 import { IoIosBriefcase } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,6 +29,8 @@ const DisplayAllJobs=(prop)=>{
     return(
 
         <>
+
+        <Link to={`/jobs/${jobDetails.id}`}>
         
         <li className='list-cont'>
            
@@ -65,7 +68,7 @@ const DisplayAllJobs=(prop)=>{
                 <p>{jobDetails.job_description}</p>
                 
         </li>
-
+</Link>
 
         </>
     )

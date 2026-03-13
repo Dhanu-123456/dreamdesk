@@ -11,7 +11,10 @@ const FindJobs = () => {
 
     const [allValues, setValues] = useState({
 
-        jobsdataArr: []
+        jobsdataArr: [],
+        emptype:[],
+        salary:"",
+        userin:""
 
     })
 
@@ -19,7 +22,9 @@ const FindJobs = () => {
 
         const getJobsData = async () => {
 
-            const api = "https://apis.ccbp.in/jobs";
+            const {emptype,salary,userin} = allValues;
+
+            const api = `https://apis.ccbp.in/jobs?employment_type=${emptype}&minimum_package=${salary}&search=${userin}`;
 
             console.log(api);
 
@@ -48,8 +53,20 @@ const FindJobs = () => {
                 console.log(error);
             }
         };  getJobsData();
-}, [])
+}, [allValues.userin,allValues.emptype]);
 
+
+const onTitleUpdate = (e)=>{
+
+    console.log(e.target.value);
+
+    
+
+    if(e.key === "Enter"){
+        setValues({...allValues,userin:e.target.value});
+
+    }
+}
 
     return (
         <>
@@ -58,7 +75,7 @@ const FindJobs = () => {
             <br/>
 
              <div className='input-box'>
-                    <input type="text" placeholder='Search Jobs Here'/>
+                    <input onKeyUp={onTitleUpdate} type="text" className="form-control" placeholder='Search Jobs Here'/>
              </div>
 
 
@@ -68,7 +85,7 @@ const FindJobs = () => {
 
                     <div className="sec1">
 
-                        <FilterSection />
+                        <FilterSection setMyValues= {setValues} myValues ={allValues} />
                     </div>
                     <div className="sec2">
 

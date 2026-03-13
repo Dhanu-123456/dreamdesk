@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
-const ProtectedRoute=(prop)=>{
+const ProtectedRoute=(props)=>{
 
-    const {Component}=prop;
+    const {Component}=props;
 
     const navigate= useNavigate();
     

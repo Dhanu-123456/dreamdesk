@@ -43,7 +43,9 @@ const salaryArr=[
 
 ]
 
-const FilterSection=()=>{
+const FilterSection=(prop)=>{
+
+    const[setMyValues,myValues] =prop;
 
     const[allValues, setValues]=useState({
 
@@ -106,6 +108,19 @@ const FilterSection=()=>{
        ) }
 
         const displayEmpType=()=>{
+
+        const onSetEmptype=(e) =>{
+
+            console.log(e.target.value);
+
+            if(e.target.checked){
+
+                setMyValues({...myValues,emptype:[allValues.emptype,e.target.value]});
+            }
+            else{
+                setMyValues({...myValues,emptype:myValues.emptype.filter(each=>each!==e.target.value)});
+            }
+        }
             
           return(
             <div className='emp-cont'>
@@ -113,8 +128,8 @@ const FilterSection=()=>{
             <ul>
                 {
                     empArr.map(each => (
-                        <li>
-                            <input id={each.id} type='checkbox'/>
+                        <li key={each.id}>
+                            <input onChange={onSetEmptype} value={each.id} id={each.id} type='checkbox'/>
                             <label htmlFor={each.id}>{each.label}</label>
                         </li>
 
@@ -133,7 +148,7 @@ const FilterSection=()=>{
             <ul>
                 {
                     salaryArr.map(each => (
-                        <li>
+                        <li key={each.id}>
                             <input name="salary" id={each.id} type='radio'/>
                             <label htmlFor={each.id}>{each.label}</label>
                         </li>

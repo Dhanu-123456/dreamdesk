@@ -7,6 +7,7 @@ import Login from './components/login/login';
 import FindJobs from './components/findJobs/findJobs';
 import ProtectedRoute from './components/protectedRoute';
 import Contact from './components/contactUs/contact';
+import JobsDetails from './components/jobDetails/jobDetails';
 
 function App() {
   
@@ -19,6 +20,8 @@ function App() {
           <Route path="/about" element ={<ProtectedRoute Component ={About}/>}></Route>
 
           <Route path= "/findJobs" element={<ProtectedRoute Component={FindJobs}/>}></Route>
+
+          <Route path= "/findJobs/:id" element={<ProtectedRoute Component={JobsDetails}/>}></Route>
 
           <Route path= "/contact" element={<ProtectedRoute Component={Contact}/>}></Route>
  
