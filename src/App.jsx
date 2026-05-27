@@ -8,6 +8,7 @@ import FindJobs from './components/findJobs/findJobs';
 import ProtectedRoute from './components/protectedRoute';
 import Contact from './components/contactUs/contact';
 import JobsDetails from './components/jobDetails/jobDetails';
+import ApplyJobs from './components/applyJobs/applyJobs';
 
 function App() {
   
@@ -24,6 +25,8 @@ function App() {
           <Route path= "/findJobs/:id" element={<ProtectedRoute Component={JobsDetails}/>}></Route>
 
           <Route path= "/contact" element={<ProtectedRoute Component={Contact}/>}></Route>
+
+          <Route path= "/applyJobs" element={<ProtectedRoute Component={ApplyJobs}/>}></Route>
  
           <Route path= "/login" element ={<Login/>}></Route>
 

@@ -8,7 +8,7 @@ import DisplayAllJobs from "../displayAllJobs/displayAllJobs";
 
 
 const FindJobs = () => {
-
+    
     const [allValues, setValues] = useState({
 
         jobsdataArr: [],
@@ -17,6 +17,8 @@ const FindJobs = () => {
         userin:""
 
     })
+
+
 
     useEffect(() => {
 
@@ -56,6 +58,8 @@ const FindJobs = () => {
 }, [allValues.userin,allValues.emptype]);
 
 
+
+
 const onTitleUpdate = (e)=>{
 
     console.log(e.target.value);
@@ -68,6 +72,8 @@ const onTitleUpdate = (e)=>{
     }
 }
 
+
+
     return (
         <>
 
@@ -79,9 +85,10 @@ const onTitleUpdate = (e)=>{
              </div>
 
 
+
             <div className="job-cont">
 
-                <div className="job-card">
+                <div className="job-layout">
 
                     <div className="sec1">
 
@@ -89,11 +96,7 @@ const onTitleUpdate = (e)=>{
                     </div>
                     <div className="sec2">
 
-                        <ul>
-                            {
-                            allValues.jobsdataArr.map(each => <DisplayAllJobs jobDetails={each} key={each.id} />)
-                        }
-                        </ul>
+                       <ul> { allValues.jobsdataArr.map(each => <DisplayAllJobs jobDetails={each} key={each.id} />) } </ul>
 
                     </div>
 

@@ -141,6 +141,17 @@ const FilterSection=(props)=>{
        )  }
 
         const displaySalary=()=>{
+
+                        const onSetSalary = (e) => {
+
+                 if(e.target.checked){
+
+                setMyValues({...myValues,salary:[...myValues.salary,e.target.value]});
+            }
+            else{
+                setMyValues({...myValues,salary:myValues.salary.filter(each=>each!==e.target.value)});
+            }
+            };
             return(
 
             <div className='sal-cont'>
@@ -149,7 +160,7 @@ const FilterSection=(props)=>{
                 {
                     salaryArr.map(each => (
                         <li key={each.id}>
-                            <input name="salary" id={each.id} type='radio'/>
+                            <input onChange = {onSetSalary}name="salary" id={each.id} type='radio'/>
                             <label htmlFor={each.id}>{each.label}</label>
                         </li>
 

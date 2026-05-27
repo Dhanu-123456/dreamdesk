@@ -6,7 +6,7 @@
   background: #f4f6ff;
 }
 
-.job-card {
+.job-layout {
   width: 100%;
   display: flex;
   gap: 24px;
