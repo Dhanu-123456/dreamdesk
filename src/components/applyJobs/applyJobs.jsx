@@ -1,4 +1,4 @@
-import './applyJObs.css'
+import './applyJobs.css'
 
 
 const ApplyJobs = ()=>{
